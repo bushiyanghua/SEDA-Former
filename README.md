@@ -37,7 +37,7 @@ Optionally remove extremes per label using a “max drop amplitude” score (con
 
 (C) Remove specified labels
 
-remove_labels = [8, 12, 14] (edit as needed)
+remove_labels = [] (edit as needed)
 
 (D) Train/Val/Test split
 
