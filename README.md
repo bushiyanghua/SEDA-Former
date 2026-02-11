@@ -12,9 +12,11 @@ GPU is optional: the script automatically uses CUDA if available; otherwise it r
 
 Note: reading parquet requires pyarrow (pip install pyarrow).
 
-1.Data Cleaning and Preprocessing
+1. Data Cleaning 、Preprocessing and Prevention of data leakage
 
 All data cleaning and preprocessing steps follow the same procedures as those adopted in the baseline comparison studies to ensure fair and reproducible evaluation.
+
+To avoid information leakage, all normalization procedures are fitted using the training set only: the StandardScaler is fit on the training data and then applied (transform) separately to the validation and test sets. The sliding-window standard-deviation channels are also computed independently for the training, validation, and test sets after data splitting, so no information is shared across subsets, ensuring an unbiased evaluation.
 
 2. Data Requirements
 
