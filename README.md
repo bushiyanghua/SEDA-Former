@@ -1,7 +1,8 @@
 # SEDA-Former
 A universal deep learning framework for empowering nanopore identification by reinforcing temporal signals
 English Version｜Quick Usage Guide for the SEDA-Former Script
-1. Environment
+
+0. Environment
 
 Python 3.8+ (recommended 3.9/3.10)
 
@@ -10,6 +11,10 @@ Key dependencies: numpy, pandas, pyarrow, scikit-learn, matplotlib, seaborn, tor
 GPU is optional: the script automatically uses CUDA if available; otherwise it runs on CPU.
 
 Note: reading parquet requires pyarrow (pip install pyarrow).
+
+1.Data Cleaning and Preprocessing
+
+All data cleaning and preprocessing steps follow the same procedures as those adopted in the baseline comparison studies to ensure fair and reproducible evaluation.
 
 2. Data Requirements
 
@@ -31,7 +36,7 @@ pd.read_parquet(parquet_path)
 
 (B) Label-wise cleaning (two stages)
 
-Compute valid_length (number of non-zero entries) and keep samples within per-label quantiles (0.35–0.65).This data preprocessing step was applied only to the cholic acid conjugates dataset, because this dataset still contains unremoved outliers. No such preprocessing was performed on the other existing datasets, for which the corresponding setting is set to 0–1 by default.
+Compute valid_length (number of non-zero entries) and keep samples within per-label quantiles .This data preprocessing step was applied only to the cholic acid conjugates dataset, because this dataset still contains unremoved outliers. No such preprocessing was performed on the other existing datasets, for which the corresponding setting is set to 0–1 by default.
 
 Optionally remove extremes per label using a “max drop amplitude” score (controlled by x).
 
@@ -41,7 +46,7 @@ remove_labels = [] (edit as needed)
 
 (D) Train/Val/Test split
 
-0.8 / 0.1 / 0.1 via two train_test_split calls with stratify
+The dataset was randomly partitioned into training, validation, and test sets using an 8:1:1 ratio.
 
 (E) Optional train downsampling
 
