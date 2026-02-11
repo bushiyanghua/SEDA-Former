@@ -1,6 +1,5 @@
 # SEDA-Former
-A universal deep learning framework for empowering nanopore identification by reinforcing temporal signals
-English Version｜Quick Usage Guide for the SEDA-Former Script
+A universal deep learning framework for empowering nanopore identification by reinforcing temporal signals｜Quick Usage Guide for the SEDA-Former Script
 
 0. Environment
 
@@ -146,7 +145,7 @@ Gate statistics cache: val_gate_stats.json
 
 
 #######################################################################
-English Version: CA-Net Quick Start Guide
+CA-Net Quick Start Guide
 1. Overview
 
 CA-Net is a baseline-aware histogram branch for nanopore event classification. The pipeline is:
