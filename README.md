@@ -97,13 +97,8 @@ The chosen threshold is written back to model.threshold, and per-class gate stat
 
 Reports:
 
-argmax accuracy (no rejection)
-
-thresholded accuracy (accuracy on accepted samples only)
-
-Not Predicted rate (rejected proportion)
-
-Confusion matrices are computed on accepted samples only (samples with prediction -1 are excluded).
+argmax accuracy 
+Confusion matrices 
 
 4. Common knobs to adjust
 
