@@ -91,9 +91,7 @@ Build an Accuracy–Coverage curve on the validation set using max-softmax confi
 
 With CAL_POLICY="target_coverage" and TARGET_VALUE=0.8, the script selects a threshold that meets the target coverage and minimizes risk.
 
-The chosen threshold is written back to model.threshold, and per-class gate stats are saved to:
-
-SAVE_JSON_PATH = "./val_gate_stats.json"
+The chosen threshold is written back to model.threshold, and per-class gate stats are saved.
 
 (J) Test evaluation + confusion matrix
 
