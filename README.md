@@ -89,7 +89,7 @@ Loss: CrossEntropyLoss (optionally re-weighted by dynamic class weights later)
 
 Build an Accuracy–Coverage curve on the validation set using max-softmax confidence.
 
-With CAL_POLICY="target_coverage" and TARGET_VALUE=0.65, the script selects a threshold that meets the target coverage and minimizes risk.
+With CAL_POLICY="target_coverage" and TARGET_VALUE=0.8, the script selects a threshold that meets the target coverage and minimizes risk.
 
 The chosen threshold is written back to model.threshold, and per-class gate stats are saved to:
 
